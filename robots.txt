@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marshall.net/sitemap.xml

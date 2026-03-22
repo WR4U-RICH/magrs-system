@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MAGRS AI Readiness Assessment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px;
+    max-width: 900px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.question {
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #0055aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>MAGRS AI Governance Readiness Assessment</h1>
+
+<p>This short assessment helps organizations reflect on their awareness of artificial intelligence use in everyday work.</p>
+
+<form>
+
+<div class="question">
+<strong>1. What type of organization are you?</strong>
+<label><input type="radio" name="org_type"> Professional services</label>
+<label><input type="radio" name="org_type"> Healthcare practice</label>
+<label><input type="radio" name="org_type"> Financial / insurance services</label>
+<label><input type="radio" name="org_type"> Technology</label>
+<label><input type="radio" name="org_type"> Retail / service business</label>
+<label><input type="radio" name="org_type"> Other</label>
+</div>
+
+<div class="question">
+<strong>2. Approximately how many employees work in your organization?</strong>
+<label><input type="radio" name="size"> 1–5</label>
+<label><input type="radio" name="size"> 6–20</label>
+<label><input type="radio" name="size"> 21–50</label>
+<label><input type="radio" name="size"> 50+</label>
+</div>
+
+<div class="question">
+<strong>3. Are employees using AI tools such as ChatGPT or Copilot?</strong>
+<label><input type="radio" name="ai_use"> Yes, regularly</label>
+<label><input type="radio" name="ai_use"> Occasionally</label>
+<label><input type="radio" name="ai_use"> Possibly</label>
+<label><input type="radio" name="ai_use"> No</label>
+<label><input type="radio" name="ai_use"> Unsure</label>
+</div>
+
+<div class="question">
+<strong>4. Has leadership discussed AI use within the organization?</strong>
+<label><input type="radio" name="discussion"> Yes, formally</label>
+<label><input type="radio" name="discussion"> Informally</label>
+<label><input type="radio" name="discussion"> Not yet</label>
+<label><input type="radio" name="discussion"> Unsure</label>
+</div>
+
+<div class="question">
+<strong>5. Does your organization have guidance for AI-assisted work?</strong>
+<label><input type="radio" name="policy"> Yes</label>
+<label><input type="radio" name="policy"> No</label>
+<label><input type="radio" name="policy"> Unsure</label>
+</div>
+
+<div class="question">
+<strong>6. Who is responsible for work produced with AI assistance?</strong>
+<label><input type="radio" name="responsibility"> Individual employee</label>
+<label><input type="radio" name="responsibility"> Supervisor</label>
+<label><input type="radio" name="responsibility"> Organizational leadership</label>
+<label><input type="radio" name="responsibility"> Not clearly defined</label>
+</div>
+
+<div class="question">
+<strong>7. Would you like to receive your readiness results?</strong>
+
+<label>Organization Name:<br>
+<input type="text" name="organization" style="width:400px;"></label>
+
+<label>Contact Name:<br>
+<input type="text" name="contact" style="width:400px;"></label>
+
+<label>Email:<br>
+<input type="email" name="email" style="width:400px;"></label>
+
+</div>
+
+<button type="submit">Submit Assessment</button>
+
+</form>
+
+</body>
+</html>

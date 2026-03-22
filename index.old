@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Richard Marshall — Neural Network Custodian</title>
+
+<meta property="og:title" content="Richard Marshall — Neural Network Custodian">
+<meta property="og:description" content="Human-first systems. Deliberate limits. Accountability over automation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marshall.net">
+<meta property="og:image" content="https://marshall.net/preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="description" content="Human-first systems. Deliberate limits. Accountability over automation.">
+
+<link rel="stylesheet" href="/style.css">
+
+<link rel="canonical" href="https://marshall.net">
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebSite",
+"name":"Marshall.net",
+"url":"https://marshall.net",
+"author":{
+ "@type":"Person",
+ "name":"Richard Marshall"
+}
+}
+</script>
+
+</head>
+
+<body>
+
+<main>
+
+<nav>
+  <a href="/" class="home">Richard Marshall</a>
+
+  <span class="nav-links">
+    <a href="/governance">Governance</a>
+    <a href="/writing">Writing</a>
+    <a href="/notes">Notes</a>
+    <a href="/newsletter">Newsletter</a>
+    <a href="/contact.html">Contact</a>
+  </span>
+</nav>
+
+<header>
+
+<h1>Richard Marshall</h1>
+
+<p class="title">
+Neural Network Custodian
+</p>
+
+<p class="muted">
+Four decades designing and maintaining real-world technical systems.
+</p>
+
+<p class="tagline">
+Human-first systems.<br>
+Deliberate limits.<br>
+Accountability over automation.
+</p>
+
+</header>
+
+
+<section>
+
+<h2>Work</h2>
+
+<p>
+I work at the boundary between intelligent systems and human trust.
+My focus is not acceleration, but restraint: helping organizations
+decide where artificial intelligence belongs, where it does not,
+and what must remain irreplaceably human.
+</p>
+
+<p>
+My current work centers on the
+<a href="/governance">Marshall AI Governance Standard</a>,
+a practical framework for establishing responsible boundaries around
+artificial intelligence before operational risks appear.
+</p>
+
+</section>
+
+<section>
+
+<h2>Why This Matters</h2>
+
+<p>
+As systems become more capable, pressure to deploy them faster increases.
+What is missing is stewardship: judgment, limits, and accountability
+that preserve human agency instead of eroding it.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Current Focus</h2>
+
+<p>
+Developing practical governance frameworks for organizations
+adopting artificial intelligence faster than their leadership
+structures can adapt.
+</p>
+
+<p>
+Recent work includes the
+<a href="/governance">Marshall AI Governance Standard</a>,
+a structured approach for establishing operational boundaries
+before AI risks appear.
+</p>
+
+</section>
+
+<section>
+
+<h2>Selected Writing</h2>
+
+<p>
+Essays on governance, restraint, and human responsibility in an age
+of increasingly capable systems.
+</p>
+
+<ul>
+
+<li>
+<a href="/ai-risk-blindspots">
+The 7 AI Risk Blindspots for Small Organizations →
+</a>
+</li>
+
+<li>
+<a href="/ai-adoption-without-governance">
+Why Most Small Firms Will Adopt AI Before They Realize It →
+</a>
+</li>
+
+</ul>
+
+<p>
+<a href="/writing">View all writing →</a>
+</p>
+
+<p>
+<a href="/notes">Working notes →</a>
+</p>
+
+</section>
+
+<section>
+
+<h2>AI Governance Framework</h2>
+
+<p>
+Marshall.net publishes the
+<a href="/magrs">Marshall AI Governance Standard</a>,
+a governance framework focused on maintaining human responsibility
+as artificial intelligence systems become increasingly capable.
+</p>
+
+</section>
+
+<footer>
+
+<p class="muted">
+© Richard Marshall · marshall.net
+</p>
+
+<p class="muted">
+<a href="/magrs">Marshall AI Governance Standard</a>
+</p>
+
+<p class="muted">
+<a href="/curation-charter">Curation Charter</a>
+<a href="/marshall-ai-governance-standard/">Marshall AI Governance Standard</a>
+</p>
+
+</footer>
+
+</main>
+
+</body>
+
+</html>

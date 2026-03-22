@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>PAGE TITLE — Richard Marshall</title>
+
+<meta name="description" content="Short description of the page.">
+
+<link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<main>
+
+<nav>
+  <a href="/" class="home">Richard Marshall</a>
+
+  <span class="nav-links">
+    <a href="/offer.html">Governance</a>
+    <a href="/writing">Writing</a>
+    <a href="/newsletter">Newsletter</a>
+    <a href="/contact.html">Contact</a>
+  </span>
+</nav>
+<header>
+
+<h1>Page Title</h1>
+
+<p class="tagline">
+Optional subtitle or description.
+</p>
+
+</header>
+
+<section>
+
+<p>
+Page content starts here.
+</p>
+
+</section>
+
+<footer>
+
+<p class="muted">
+© Richard Marshall · marshall.net
+</p>
+
+</footer>
+
+</main>
+
+</body>
+</html>
