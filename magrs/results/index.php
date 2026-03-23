@@ -188,9 +188,11 @@ Annual Participation: $295
 
 <br><br>
 
-<a class="button" href="/magrs/join/">Begin Participation</a>
+<a class="button" href="/magrs/join/">Start My Readiness Review</a>
 
 </div>
-
+<p style="font-size: 0.9em; color:#666; margin-top:10px;">
+No obligation. Results are private.
+</p>
 </body>
 </html>
