@@ -161,6 +161,31 @@ body {
 
 </div>
 
+<?php if ($id): ?>
+
+<div class="section">
+
+<strong>Your Referral ID</strong><br>
+
+Share this ID with other organizations:<br><br>
+
+<div style="font-size:18px; font-weight:bold;">
+<?php echo htmlspecialchars($id); ?>
+</div>
+
+<p style="font-size:0.9em; color:#666;">
+Referral activity will be tracked and may unlock future benefits within the MAGRS system.
+</p>
+
+</div>
+
+<?php endif; ?>
+
+<p style="margin-top:10px;">
+Share this link:<br>
+https://marshall.net/magrs/ai-readiness/?ref=<?php echo urlencode($id); ?>
+</p>
+
 <div class="cta">
 
 <strong>The Accountability Gap</strong><br><br>
