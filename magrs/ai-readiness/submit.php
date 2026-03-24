@@ -2,39 +2,40 @@
 
 require '../../magrs-admin/config.php';
 
-// ----------------------
-// Collect form data
-// ----------------------
+// -----------------------------
+// LOCAL SAFETY CHECK
+// -----------------------------
+if (!$pdo) {
+    header("Location: /magrs/results/index.php");
+    exit;
+}
 
-$org_name = trim($_POST['org_name'] ?? '');
-$contact_name = trim($_POST['contact_name'] ?? '');
-$email = trim($_POST['email'] ?? '');
-$role = trim($_POST['role'] ?? '');
+// -----------------------------
+// COLLECT INPUT
+// -----------------------------
+
+$data = [
+    'ai_use' => $_POST['ai_use'] ?? '',
+    'ai_discussion' => $_POST['ai_discussion'] ?? '',
+    'ai_policy' => $_POST['ai_policy'] ?? '',
+    'ai_responsibility' => $_POST['ai_responsibility'] ?? '',
+    'ai_review' => $_POST['ai_review'] ?? '',
+    'ai_data_risk' => $_POST['ai_data_risk'] ?? ''
+];
+
+$assessment_json = json_encode($data);
+
+$org_name = $_POST['org_name'] ?? '';
+$contact_name = $_POST['contact_name'] ?? '';
+$email = $_POST['email'] ?? '';
+$role = $_POST['role'] ?? '';
 
 $ref = $_POST['ref'] ?? null;
 $src = $_POST['src'] ?? null;
 
-// Assessment answers
-$assessment = [
-    'ai_use' => $_POST['ai_use'] ?? null,
-    'ai_discussion' => $_POST['ai_discussion'] ?? null,
-    'ai_policy' => $_POST['ai_policy'] ?? null,
-    'ai_responsibility' => $_POST['ai_responsibility'] ?? null
-];
-
-$assessment_json = json_encode($assessment);
-
-// ----------------------
-// Basic validation
-// ----------------------
-
-if (!$org_name || !$contact_name || !$email) {
-    die("Missing required fields.");
-}
-
-// ----------------------
-// Generate MAGRS ID
-// ----------------------
+// -----------------------------
+// GENERATE ID
+// -----------------------------
 
 function generateMAGRSID($pdo) {
     $chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -55,59 +56,32 @@ function generateMAGRSID($pdo) {
     return $public_id;
 }
 
-// ----------------------
-// Check existing org
-// ----------------------
+// -----------------------------
+// INSERT (simple version)
+// -----------------------------
 
-$stmt = $pdo->prepare("SELECT id, public_id FROM organizations WHERE email = ?");
-$stmt->execute([$email]);
-$existing = $stmt->fetch(PDO::FETCH_ASSOC);
+$public_id = generateMAGRSID($pdo);
 
-if ($existing) {
+$stmt = $pdo->prepare("
+    INSERT INTO organizations 
+    (public_id, org_name, contact_name, email, industry, assessment_data, status, created_at, referred_by, referral_source)
+    VALUES (?, ?, ?, ?, ?, ?, 'prospect', NOW(), ?, ?)
+");
 
-    // Update existing
-    $stmt = $pdo->prepare("
-        UPDATE organizations 
-        SET org_name = ?, contact_name = ?, industry = ?, status = 'applicant', assessment_data = ?
-        WHERE email = ?
-    ");
+$stmt->execute([
+    $public_id,
+    $org_name,
+    $contact_name,
+    $email,
+    $role,
+    $assessment_json,
+    $ref,
+    $src
+]);
 
-    $stmt->execute([
-        $org_name,
-        $contact_name,
-        $role,
-        $assessment_json,
-        $email
-    ]);
+// -----------------------------
+// REDIRECT
+// -----------------------------
 
-    $public_id = $existing['public_id'];
-
-} else {
-
-    // Insert new
-    $public_id = generateMAGRSID($pdo);
-
-    $stmt = $pdo->prepare("
-        INSERT INTO organizations 
-        (public_id, org_name, contact_name, email, phone, industry, status, created_at, referred_by, referral_source, assessment_data)
-        VALUES (?, ?, ?, ?, '', ?, 'prospect', NOW(), ?, ?, ?)
-    ");
-
-    $stmt->execute([
-        $public_id,
-        $org_name,
-        $contact_name,
-        $email,
-        $role,
-        $ref,
-        $src,
-        $assessment_json
-    ]);
-}
-
-// ----------------------
-// Redirect to results
-// ----------------------
-
-header("Location: /magrs/results/?id=" . urlencode($public_id));
+header("Location: /magrs/results/index.php?id=" . urlencode($public_id));
 exit;
