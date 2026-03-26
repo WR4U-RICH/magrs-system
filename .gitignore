@@ -1,0 +1,33 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+
+# cPanel / hosting noise
+error_log
+
+# Node (if ever used)
+node_modules/
+
+# Vendor (if you later use Composer)
+vendor/
+
+# Cache
+.cache/
+
+# Temporary files
+*.tmp
+
+# Backup files
+*.bak
+
+# zip files
+*.zip
+
+
+
